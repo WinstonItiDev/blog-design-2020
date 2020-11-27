@@ -86,6 +86,31 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./client/components/About.jsx":
+/*!*************************************!*\
+  !*** ./client/components/About.jsx ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var About = function About() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "about"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "welcome--about"
+  }, "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (About);
+
+/***/ }),
+
 /***/ "./client/components/App.jsx":
 /*!***********************************!*\
   !*** ./client/components/App.jsx ***!
@@ -97,54 +122,218 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+/* harmony import */ var _hooks_useSticky_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./hooks/useSticky.js */ "./client/components/hooks/useSticky.js");
+/* harmony import */ var _components_Welcome_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Welcome.jsx */ "./client/components/Welcome.jsx");
+/* harmony import */ var _components_NavBar_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/NavBar.jsx */ "./client/components/NavBar.jsx");
 
 
 
-var App = /*#__PURE__*/function (_React$Component) {
-  _inherits(App, _React$Component);
 
-  var _super = _createSuper(App);
 
-  function App(props) {
-    _classCallCheck(this, App);
+function App() {
+  var _useSticky = Object(_hooks_useSticky_js__WEBPACK_IMPORTED_MODULE_1__["default"])(),
+      isSticky = _useSticky.isSticky,
+      element = _useSticky.element;
 
-    return _super.call(this, props);
-  }
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_NavBar_jsx__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    sticky: isSticky
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Welcome_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    element: element
+  }));
+}
 
-  _createClass(App, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Hello World! Testing!!! Woooo! "));
-    }
-  }]);
+/* harmony default export */ __webpack_exports__["default"] = (App); // const { isSticky, element } = useSticky()
+// class App extends React.Component {
+//   constructor(props) {
+//     super(props)
+//   }
+//   render() {
+//     return (
+//       <>
+//         <NavBar sticky={isSticky} />
+//         <Welcome element={element} />
+//       </>
+//     )
+//   }
+// }
+// export default App
 
-  return App;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+/***/ }),
 
-/* harmony default export */ __webpack_exports__["default"] = (App);
+/***/ "./client/components/NavBar.jsx":
+/*!**************************************!*\
+  !*** ./client/components/NavBar.jsx ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var NavBar = function NavBar(_ref) {
+  var sticky = _ref.sticky;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    className: sticky ? "navbar navbar-sticky" : "navbar"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "navbar--logo-holder"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Website Title")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "navbar--link"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "navbar--link-item"
+  }, "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "navbar--link-item"
+  }, "Blog"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "navbar--link-item"
+  }, "Projects"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "navbar--link-item"
+  }, "About")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (NavBar); // import React from "react"
+// import "./Navbar.css"
+// import Logo from "../../assets/images/logo.svg"
+// const Navbar = ({ sticky }) => (
+//   <nav className={sticky ? "navbar navbar-sticky" : "navbar"}>
+//     <div className="navbar--logo-holder">
+//       {sticky ? <img src={Logo} alt="logo" className="navbar--logo" /> : null}
+//       <h1> Stick'Me</h1>
+//     </div>
+//     <ul className="navbar--link">
+//       <li className="navbar--link-item">Home</li>
+//       <li className="navbar--link-item">About</li>
+//       <li className="navbar--link-item">Blog</li>
+//     </ul>
+//   </nav>
+// )
+// export default Navbar
+
+/***/ }),
+
+/***/ "./client/components/Welcome.jsx":
+/*!***************************************!*\
+  !*** ./client/components/Welcome.jsx ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _About_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./About.jsx */ "./client/components/About.jsx");
+
+
+
+var Welcome = function Welcome(_ref) {
+  var element = _ref.element;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "welcome"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    ref: element
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Scroll.. down to see! I will stick with you!"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_About_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_About_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_About_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_About_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Welcome); // import React from "react"
+// import "./Welcome.css"
+// import Logo from "../../assets/images/logo.svg"
+// import About from "./About"
+// const Welcome = ({ element }) => {
+//   return (
+//     <main>
+//       <section className="welcome">
+//         <div ref={element}>
+//           <img src={Logo} alt="logo" className="welcome--logo" />
+//           <p>Even if you scroll, I will stick with you</p>
+//           <button className="welcome__cta-primary">Contact us</button>
+//         </div>
+//       </section>
+//       <About />
+//     </main>
+//   )
+// }
+// export default Welcome
+
+/***/ }),
+
+/***/ "./client/components/hooks/useSticky.js":
+/*!**********************************************!*\
+  !*** ./client/components/hooks/useSticky.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+function useSticky() {
+  var _arguments = arguments,
+      _this = this;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      isSticky = _useState2[0],
+      setSticky = _useState2[1];
+
+  var element = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+
+  var handleScroll = function handleScroll() {
+    window.scrollY > element.current.getBoundingClientRect().bottom ? setSticky(true) : setSticky(false);
+  }; // This function handles the scroll performance issue
+
+
+  var debounce = function debounce(func) {
+    var wait = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 20;
+    var immediate = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+    var timeOut;
+    return function () {
+      var context = _this,
+          args = _arguments;
+
+      var later = function later() {
+        timeOut = null;
+        if (!immediate) func.apply(context, args);
+      };
+
+      var callNow = immediate && !timeOut;
+      clearTimeout(timeOut);
+      timeOut = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    window.addEventListener("scroll", debounce(handleScroll));
+    return function () {
+      window.removeEventListener("scroll", function () {
+        return handleScroll;
+      });
+    };
+  }, [debounce, handleScroll]);
+  return {
+    isSticky: isSticky,
+    element: element
+  };
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (useSticky);
 
 /***/ }),
 
